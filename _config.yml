@@ -20,7 +20,6 @@ footer-links:
   github: antonior92
   linkedin: antonior92
   twitter: ahortaribeiro
-  stackoverflow: users/6941148/antonio-horta-ribeiro
 
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
@@ -28,7 +27,7 @@ google_analytics: UA-123907938-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://antonior92.github.io
+url: http://simonokwir.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
