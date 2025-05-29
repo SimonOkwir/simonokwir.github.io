@@ -6,54 +6,128 @@ permalink: /publications
 
 <h1>Publications</h1>
 
-I am interested in the intersection between machine learning, automatic control, signal processing, and to its application in medicine.
+<p>I am interested in operations management, supply chain, circular economy, and the application of artificial intelligence in organizational contexts.</p>
 <ul>
-    <li> Samples of my work on <strong>machine learning:</strong>
-       ICML 2025, AISTATS 2025, NeurIPS 2024, ICML 2024, Neurips 2023, AISTATS 2020.</li>
-    <li>  Samples of my work on <strong>system identification</strong> and <strong>signal processing:</strong>
-        Automatica (2025), IEEE Transactions on Signal Processing (2023),
-     ICASSP (2021), Automatica (2020).</li>
-    <li> Samples of my work on <strong>medical applications</strong>:
-        Plos Neglected Tropical Disease (2023)
-    Nature Communications (2021), Nature Communications (2020).</li>
-    <li> Examples of <strong>international collaborations in medicine</strong> include:
-        npj Digital Medicine (2025), Lancet Digital Medicine (2024), npj Digital Medicine (2024),  IEEE Transactions on Biomedical Engineering (2023),
-    Circulation (2023).</li>
+    <li>Samples of my work on <strong>operations management:</strong> Journal of Air Transport Management (2017, 2025), Integrated Communications, Navigation and Surveillance Conference (2014).</li>
+    <li>Samples of my work on <strong>circular economy and sustainability:</strong> Journal of Cleaner Production (2021), Academy of Management Proceedings (2020).</li>
+    <li>Samples of my work on <strong>artificial intelligence and innovation:</strong> International Journal of Organizational Analysis (2024), Organization Studies (2023).</li>
+    <li>Samples of my work on <strong>performance measurement:</strong> International Journal of Management Reviews (2018), IEEE Transactions on Engineering Management (2019, 2021).</li>
 </ul>
 
-
-See a curated publication list below:
-
-{% for categories in site.data.publications.categories %}
-    <h2>{{ categories.name }}</h2>
-    <table style="border-collapse: separate; border-spacing: 20px 30px;">
-    {% for paper_id in categories.papers %}
-        <tr style="line-height: 15px; height: 20px;">
-        {% assign pp = site.data.publications.refs.entries[paper_id] %}
-        {%  assign mylinks = site.data.publications.links[paper_id] %}
-        {% unless mylinks[0] == blank %}
-            {% assign link =  mylinks[0].link  %}
-        {% endunless %}
-        {% unless pp.doi == blank %}
-            {% assign link =  "https://www.doi.org/" | append: pp.doi  %}
-        {% endunless %}
-
-        <td style="min-width: 140px;max-width: 140px;text-align:left ;"> <span style="font-size: 0.7em;"> {{ pp.journal }} ({{ pp.year }})</span> </td>
-        <td>  <a href= {{ link }} > {{ pp.title }}</a>  </br>
-
-        <i><span style="font-size: 0.7em;">
-        {% assign var = 1 %}
-        {% for author in pp.author %}
-            {% if author.last == "Ribeiro" and author.first contains "Ant" and author.first contains "nio" and author.middle contains "H"%}
-                 <strong> {{ author.first }} {{ author.middle }} {{ author.last }}</strong>{% unless pp.author.size == var %}, {% endunless %}
-            {% else %}
-                 {{ author.first }} {{ author.middle }} {{ author.last }}{% unless pp.author.size == var %}, {% else%}. {% endunless %}
-            {% endif %}
-            {% assign var = var | plus: 1 %}
-        {% endfor %}
-        </span></i>
+<h2>Curated Publication List</h2>
+<table style="border-collapse: separate; border-spacing: 20px 30px;">
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">International Journal of Management Reviews (2018)</td>
+        <td><a href="https://www.doi.org/10.1111/ijmr.12184">Performance Measurement and Management Systems: a perspective from complexity theory</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>, S. S. Nudurupati, M. Ginieis, J. Angelis. Cited by: 151.</span></i>
         </td>
-        </tr>
-    {% endfor %}
-    </table>
-{% endfor %}
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Journal of Cleaner Production (2021)</td>
+        <td><a href="https://www.doi.org/10.1016/j.jclepro.2021.128531">Beyond “Leanear” production: A multi-level approach for achieving circularity in a lean manufacturing context</a><br>
+            <i><span style="font-size: 0.7em;">T. Schmitt, C. Wolf, T. T. Lennerfors, <strong>S. Okwir</strong>. Cited by: 78.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Cognition, Technology & Work (2015)</td>
+        <td><a href="https://www.doi.org/10.1007/s10111-015-0329-z">Preparing for Airport Collaborative Decision Making (A-CDM) implementation: an evaluation and recommendations</a><br>
+            <i><span style="font-size: 0.7em;">S. Corrigan, L. Mårtensson, A. Kay, <strong>S. Okwir</strong>, P. Ulfvengren, N. McDonald. Cited by: 57.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Journal of Air Transport Management (2017)</td>
+        <td><a href="https://www.doi.org/10.1016/j.jairtraman.2016.12.005">Managing turnaround performance through collaborative decision making</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>, P. Ulfvengren, J. Angelis, F. Ruiz, Y. M. N. Guerrero. Cited by: 44.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">IEEE Transactions on Engineering Management (2019)</td>
+        <td><a href="#">Manufacturing management in process industries: The impact of market conditions and capital expenditure on firm performance</a><br>
+            <i><span style="font-size: 0.7em;">P. Moser, O. Isaksson, <strong>S. Okwir</strong>, R. W. Seifert. Cited by: 29.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">International Journal of Organizational Analysis (2024)</td>
+        <td><a href="#">Artificial intelligence in talent acquisition: exploring organisational and operational dimensions</a><br>
+            <i><span style="font-size: 0.7em;">D. Paramita, <strong>S. Okwir</strong>, C. Nuur. Cited by: 22.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">ICNS Conference (2014)</td>
+        <td><a href="#">Collaborative Decision Making (CDM) in Airport Surface: Europe vs USA implementations, challenges and best practices</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>, A. Correas. Cited by: 22.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Journal of Applied Economics and Business Research (2022)</td>
+        <td><a href="#">Reflections on Neil Postman's "Amusing Ourselves to Death: Public Discourse in the Age of Show Business" (1985) in the context of today's digital social media platforms</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>, C. Nuur. Cited by: 5.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Cognition, Technology & Work (2015)</td>
+        <td><a href="https://www.doi.org/10.1007/s10111-015-0338-y">Implementing collaborative decision making in European airports: challenges & recommendations</a><br>
+            <i><span style="font-size: 0.7em;">S. Corrigan, L. Martensson, A. Kay, <strong>S. Okwir</strong>, P. Ulfvengren. Cited by: 4.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Organization Studies (2023)</td>
+        <td><a href="https://www.doi.org/10.1177/01708406231159494">Media review: Robotization of work? Answers from popular culture, media and social sciences</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>. Cited by: 2.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Academy of Management Proceedings (2021)</td>
+        <td><a href="#">Innovation Configurations and Firm Performance: An fsQCA Approach</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>, E. Saiedi, V. K. Sinha. Cited by: 1.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Unknown (2017)</td>
+        <td><a href="#">Prediction of airport infrastructures performance with collaborative decision making: Studies from Barajas airport</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>. Cited by: 1.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">KTH Royal Institute of Technology (2017)</td>
+        <td><a href="#">Collaborative Measures: Challenges in Airport Operations</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>. Cited by: 1.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Humanizing the Digital Workspace (2025)</td>
+        <td><a href="#">The Hybrid Star: A Systems Thinking Approach to Hybrid Work</a><br>
+            <i><span style="font-size: 0.7em;">A. Pedersen, C. Ipsen, K. Kirchner, K. Edwards, P. A. Jensen, T. T. Lennerfors, <strong>S. Okwir</strong>.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Journal of Air Transport Management (2025)</td>
+        <td><a href="https://www.doi.org/10.1016/j.jairtraman.2024.102684">Exploring prediction accuracy for optimal taxi times in airport operations using various machine learning models</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>, K. Amouzgar, A. H. C. Ng.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">IEEE Transactions on Engineering Management (2021)</td>
+        <td><a href="#">Manufacturing Management in Process Industries: The Impact of Market Conditions and Capital Expenditure on Firm Performance</a><br>
+            <i><span style="font-size: 0.7em;">P. U. Moser, O. Isaksson, <strong>S. Okwir</strong>, R. Seifert. Cited by: Not listed.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Academy of Management Proceedings (2020)</td>
+        <td><a href="#">Factors that Affect Collaborative Performance Management Systems</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>, U. Bititci, Y. Maria Nùnez.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Academy of Management Proceedings (2020)</td>
+        <td><a href="#">Industry 4.0-Led Circular Business Model Innovation: Creating Economic-Environmental-Social Value</a><br>
+            <i><span style="font-size: 0.7em;">E. Ünal, S. Shoaib-ul-Hasan, <strong>S. Okwir</strong>.</span></i>
+        </td>
+    </tr>
+    <tr style="line-height: 15px; height: 20px;">
+        <td style="min-width: 140px; max-width: 140px; text-align: left; font-size: 0.7em;">Unknown (Not published)</td>
+        <td><a href="#">Exploring Prediction Accuracy Using Different Machine Learning Models within Airport Turnaround Operations</a><br>
+            <i><span style="font-size: 0.7em;"><strong>S. Okwir</strong>.</span></i>
+        </td>
+    </tr>
+</table>
