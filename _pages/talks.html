@@ -1,18 +1,17 @@
 ---
 layout: default
-title: Invited talks
+title: Scientific Meetings
 permalink: /talks
 ---
 
-
-<h1>Invited talks</h1>
+<h1>Scientific Meetings</h1>
 
 <ul>
-{% for t in site.data.talks %}
-  {% if t.type == "invited university" or  t.type == "invited conference" %}
-  <li>{{ t.venue }} ({{ t.date }}){% unless t.youtube == blank %} <a href="https://www.youtube.com/embed/{{ t.youtube }}">(video)</a> {% endunless %}
-  {% unless t.slide == blank %} <a href="{{ t.slide }}">(slide)</a> {% endunless %} {% unless t.slidelive == blank %} <a href="{{ t.slide }}">(slidelive)</a> {% endunless %}
-  {% endif %}
-  </li>
-{% endfor %}
+    <li>Special Session: Developing a Sustainability Mindset in the Operations Management Context - An Interactive Workshop, EuROMA 2025 Conference (2025)</li>
+    <li>Plenary Session: Developing Sustainability Mindset Through Operations and Supply Chain Course, EuROMA 2024 Conference (2024)</li>
+    <li>Session Host and Moderator: Oral Assessments & Podcasting, Learning and Teaching Conference, Uppsala University (October 19, 2023)</li>
+    <li>Moderator and Chair: Keynote Speech “The Future of Work Now, And How to Lead It” (Online Event, 150+ Attendees), DTU, University Denmark (October 31, 2021)</li>
+    <li>Invited Speaker: Operational Excellence and Innovation Days for MBA & PhD, Cranfield University (2021)</li>
+    <li>Main Organizer: Research Days (40+ Faculty Members), Uppsala University (2021)</li>
+    <li>Session Panellist and Organizer, Scandinavian Academy of Industrial Management (2019)</li>
 </ul>
