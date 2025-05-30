@@ -1,68 +1,9 @@
 ---
 layout: default
-title:
+title: Research Group
 permalink: /group
 ---
 
+<h1>Research Group</h1>
 
-<h1>Research group:</h1>
-
-
-I recently joined Uppsala University as Assistant Professor and I am expanding my group.
-We work on machine learning, signal processing and automatic control. Developing basic theory
-and creating new applications in medicine.
-
-<ul>
-{% for p in site.data.supervision %}
-    {% for s in p.students %}
-        {% if s.status == "In Progress" %}
-        <li>  <strong>{{ p.level }} ({{ s.role}}):</strong> {{ s.student }}. <i>{{ s.project }}</i> </li>
-        {% endif %}
-        {% endfor %}
-{% endfor %}
-</ul>
-
-
-<h2>Alumni:</h2>
-
-<ul>
-{% for p in site.data.supervision %}
-    {% for s in p.students %}
-        {% if s.status == "Complete" %}
-        <li>  <strong>{{ p.level }} ({{ s.role}}):</strong>
-            {{ s.student }}.   <a href={{s.thesis}}> {{s.project}}</a><i> ({{s.end}}).</i>
-        </li>
-        {% endif %}
-        {% endfor %}
-{% endfor %}
-</ul>
-
-
-
-<h1> Updates from students</h1>
-<div class="news">
-<table>
-{% for entry in site.data.news %}
-    {% if entry.tag == "student" %}
-  <tr>
-    <td style="min-width: 30px;" class="datev">{{ entry.date }}</td>
-      <td style="width: 90%">
-          {{entry.text}}
-          {% if entry.link %}
-          <a href="{{entry.link}}">(link)</a>
-          {% endif %}
-          {% if entry.links %}
-                {% for l in entry.links %}
-                          <a href="{{l}}">(link)</a>
-
-                {% endfor %}
-          {% endif %}
-          {% if entry.photo %}
-           <a href="{{entry.photo}}">(photo)</a>
-          {% endif %}
-      </td>
-  </tr>
-     {% endif %}
-{% endfor %}
- </table>
-</div>
+<p>I am a Researcher and Lecturer at Uppsala University, leading a group focused on operations management, supply chain, circular economy, and the application of artificial intelligence in industrial engineering. Between 2017 and 2023, I supervised over 60 Master and Bachelor students and served as a reviewer and examiner for three PhD defenses. I am currently expanding my group and seeking motivated <strong>MSc, PhD, and postdoctoral candidates</strong> to join our research efforts.</p>
